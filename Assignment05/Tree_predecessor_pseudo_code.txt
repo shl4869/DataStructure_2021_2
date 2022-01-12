@@ -1,0 +1,15 @@
+Tree_predecessor() : pseudo code
+
+Tree_predecessor(x)
+{
+	if x->left != NULL	//x's left subtree is not null
+		return the rightmost node of left subtree
+
+	//x's left subtree is null
+	y = x->parent
+	while(y != NULL and x == y->left){
+		x = y
+		y = y->parent
+	}
+	return y
+}

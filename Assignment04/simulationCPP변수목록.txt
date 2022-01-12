@@ -1,0 +1,42 @@
+// Simulation.cpp 변수목록
+
+typedef struct element{
+	int id;
+	int arrival_time;
+	int sercixe_time;
+}		//Customer structure 고객정보 구조체
+
+QueueType queue; //직원 한명의 큐
+
+random() //generate decimal 0 to 1
+
+int duration = 10; // 시뮬레이션 시간(최대시간)
+
+double arrival_prob = 0.7; // 유닛타임 당 고객 출현 확률
+
+int max_serv_time = 5; // 한 고객당 걸리는 최대 시간
+
+int clock;
+
+int customers; //총 고객수
+int served_customers; //서비스를 받은 고객수
+int wated_time; //고객이 기다린 총 시간
+
+int is_empty(QueueType *q) //빈 큐 판단함수, front와 rear일치시 1 리턴
+int is_full(QueueType *q) //꽉 찬 큐 판단 함수, 강의자료 참조
+
+void enqueue(QueueType *q, element item) //item의 정보를 가진 원소를 큐에 추가 
+element dequeue(QueueType *q) //큐에서 하나를 pop
+
+int is_customer_arrived() //랜덤함수로 손님이 왔는지 판단
+void insert_customer(int arrival_time) //새 손님 초기화 후 큐에 추가
+void remove_customer() //큐가 비어있으면 0 리턴, customer는 큐에서 뽑은 element로 초기화, 고객 하나 서비스 시작
+void print_start() //총 정보 출력
+
+메인함수
+while문: 
+	루프 돌때마다 클락+1 
+	고객발생하면 insert_customer돌림
+	서비스 타임 남아잇으면 1 줄임
+	아니면 새로운 고객 들임
+while문 끝나면 정보출력
